@@ -1,13 +1,24 @@
-# include<stdio.h>
+#include<stdio.h>
 int main()
 {
-  int n,sum=0,remainder;
-  printf("enter the positive integer n");
-  scanf("%d",&n);
-  while (n!=0)
-  remainder=n%10;
-  sum=sum+remainder;
-  n=n/10;
-  printf("sum of digits of a number=%d",&sum);
-  return 0;
+   int num,sum=0;
+   printf("enter the number");
+   scanf("%d",&num);
+   for(int i=1;i<=num/2;i++)
+   {
+    if(num%i==0)
+    {
+      sum=sum+i;
+    }
+
+ }
+ if(sum==num && num!=0)
+ {
+  printf("enterd number is perfect");
+ }
+ else
+ {
+  printf("entered number is not perfect");
+ }
+ return 0;
 }

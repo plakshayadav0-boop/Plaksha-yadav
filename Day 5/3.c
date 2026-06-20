@@ -1,19 +1,17 @@
-# include<stdio.h>
+#include<stdio.h>
 int main()
 {
-    int n, remainder, product=1;
-    printf("enter the number: ");
-    scanf("%d[]", &n);
-    if(n==0)
-     {
-        product==0;
-     }
-     while(n!=0)
-    {
-        remainder=n%10;
-        product=product*remainder;
-        n=n/10;
+    int num, i;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    printf("Factors of %d are: ", num);
+    for(i = 1; i <= num; i++) {
+        if(num % i == 0) {
+            printf("%d ", i);
+        }
     }
-    printf("product of digits: %d", product);
+
     return 0;
 }

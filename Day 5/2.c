@@ -1,15 +1,30 @@
 # include<stdio.h>
 int main()
 {
-    int n,remainder,reversed=0;
-    printf("enter the positive  number");
-    scanf("%d",&n);
-    while(n!=0)
+    int num, temp, sum = 0, digit, fact;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    temp = num;
+    while (temp > 0) 
     {
-        remainder=n%10;
-        reversed=reversed*10+remainder;
-        n=n/10;
+        digit = temp % 10;
+        fact = 1;
+        for (int i = 1; i <= digit; i++) {
+            fact *= i;
+        }
+
+        sum += fact;
+        temp /= 10;
+    
+    if (sum == num) 
+    {
+        printf("%d is a Strong number.\n", num);
+    } else 
+    {
+        printf("%d is not a Strong number.\n", num);
     }
-    printf("enter the reversed number+%d",&reversed);
-    return 0;
+        return 0;
+}
+
 }
